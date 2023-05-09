@@ -1,0 +1,19 @@
+
+@use './Typography.scss' as *;
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:$primary-color;
+  height: 100vh;
+  font-family:$primary-font ;
+}
+
+.debug{
+  background-color: pink;
+  border: 1px solid black;
+}
