@@ -25,4 +25,5 @@ export default {
 <style lang="scss">
   @use './components/scss/General.scss' as *;
   @use './components/scss/Typography.scss' as *;
+  @use './components/scss/Mixin.scss' as *;
 </style>
