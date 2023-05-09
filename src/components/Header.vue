@@ -20,12 +20,15 @@ export default {
 </script>
 
 <template>
+  
   <header>
     <!-- logo -->
-    <div class="logo">
-      <img :src="store.logo" alt="Lyricsmus">
+    <div class="logo"
+    v-for="img in store.imgs"
+    :key="img">
+      <img :src="img.logo" alt="Lyricsmus">
     </div>
-
+  
     <!-- navbar -->
     <nav>
       <Navbar
@@ -37,8 +40,9 @@ export default {
         cerca
       </button>
     </nav>
-    
+
   </header>
+  
 </template>
 
 
@@ -50,14 +54,23 @@ export default {
 
 header{
   @include d-flex("between");
+  width: 100%;
   height:100px;
-  margin:0 30px;
   font-weight: bold;
-  
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  background-color: $primary-color;
+
   .logo{
     @include d-flex("both");
     width: 175px;
     height:100%;
+    margin:0 20px;
+  }
+
+  button{
+    margin: 0 20px;
   }
 
 

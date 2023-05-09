@@ -2,7 +2,18 @@ import {reactive} from 'vue';
 
 export const store = reactive ({
 
-  logo:'/public/imgs/assets/Logo.png',
+  imgs:[
+    {
+      name:'logo',
+      logo:'/public/imgs/assets/Logo.png',
+    },
+    {
+      name:'jumbotron',
+      jumbotron:'/public/image (1).png'
+    }
+  ],
+
+
 
   HeaderLinks:[
     'home',

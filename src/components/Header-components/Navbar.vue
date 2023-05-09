@@ -37,7 +37,7 @@ export default {
 
   nav{
     @include d-flex("both");
-    width: 765px;
+    width: 45%;
     height:100%;
     
     ul{
