@@ -29,7 +29,7 @@ export default {
     <!-- navbar -->
     <nav>
       <Navbar
-      v-for="link in store.links"
+      v-for="link in store.HeaderLinks"
       :key="link"
       :link="link"
       />

@@ -6,11 +6,22 @@ export default {
 
 <template>
   <main class="debug">
-    <h1>MAIN</h1>
+    <div class="jumbotron">
+      <img src="../../public/image (1).png" alt="">
+    </div>
   </main>
 </template>
 
 
-<style>
+<style lang="scss">
+  .jumbotron{
+    width: 100%;
+    height:800px;
 
+    img{
+      width: 100%;
+      height:800px;
+      object-fit: cover;
+    }
+  }
 </style>
