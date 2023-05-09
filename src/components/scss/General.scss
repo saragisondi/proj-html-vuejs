@@ -11,6 +11,7 @@ body{
   background-color:$primary-color;
   height: 100vh;
   font-family:$primary-font ;
+  color:$tertiary-color;
 }
 
 img{
@@ -23,6 +24,7 @@ li{
 
 a{
   text-decoration: none;
+  color:$tertiary-color;
 }
 
 .debug{

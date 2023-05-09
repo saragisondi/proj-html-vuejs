@@ -1,6 +1,18 @@
 <script>
+
+import Navbar from './Header-components/Navbar.vue'
+import {store} from '../data/store'
+
 export default {
   name:'Header',
+  components:{
+    Navbar,
+  },
+  data(){
+    return{
+      store
+    }
+  }
 }
 </script>
 
@@ -14,16 +26,14 @@ export default {
 
     <!-- navbar -->
     <nav class="debug">
-      <ul>
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">BLOG</a></li>
-        <li><a href="#">EVENTS</a></li>
-        <li><a href="#">GALLERY</a></li>
-        <li><a href="#">ABOUT US</a></li>
-        <li><a href="#">CONTACT US</a></li>
-        <li><a href="#">SHOP</a></li>
-      </ul>
-      <button>CE</button>
+      <Navbar
+      v-for="link in store.links"
+      :key="link"
+      :link="link"
+      />
+      <button>
+        cerca
+      </button>
     </nav>
     
   </header>
@@ -44,25 +54,9 @@ header{
     @include d-flex("both");
     width: 175px;
     height:100%;
-  }
-
-  nav{
-    @include d-flex("both");
-    width: 765px;
-    height:100%;
     
-    ul{
-      @include d-flex("both");
-      li{
-        margin:0 15px;
-      }
-    }
-
-    button{
-      margin:0 20px;
-    }
-
   }
+
 }
 
 </style>
