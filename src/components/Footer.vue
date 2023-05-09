@@ -1,16 +1,44 @@
 <script>
+
+import Column from './Footer-components/Column.vue'
+import {store} from '../data/store'
+
 export default {
-  name:'Footer'
+  name:'Footer',
+  
+  components:{
+    Column
+  },
+  data(){
+    return{
+      store
+    }
+  },
 }
 </script>
 
 <template>
   <footer class="debug">
-    <h1>FOOTER</h1>
+
+    <div class="container">
+      <div class="row">
+        <!-- TOFIX -->
+        <Column
+          :title="store.title"
+          :text="store.text"
+        />
+      </div>
+    </div>
+
   </footer>
 </template>
 
 
-<style>
+<style lang="scss" scoped>
+@use './scss/Mixin.scss' as *;
+@use './scss/General.scss' as *;
+@use './scss/Typography.scss' as *;
+
+
 
 </style>

@@ -23,10 +23,8 @@ export default {
   
   <header>
     <!-- logo -->
-    <div class="logo"
-    v-for="img in store.imgs"
-    :key="img">
-      <img :src="img.logo" alt="Lyricsmus">
+    <div class="logo">
+      <img :src="store.logo" alt="Lyricsmus">
     </div>
   
     <!-- navbar -->
