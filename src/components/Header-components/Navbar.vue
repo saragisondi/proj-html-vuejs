@@ -3,7 +3,14 @@ export default {
   name:'Navbar',
   props:{
     link:String,
-  }
+  },
+
+  data(){
+    return{
+      isActive:false,
+    }
+  },
+
 }
 </script>
 
@@ -11,7 +18,11 @@ export default {
   <nav>
     <ul>
       <li>
-        <a href="#">{{ link.toUpperCase() }}</a>
+        <a href="#"
+        :class="{'active' : isActive === true}" 
+        @click=" isActive = !isActive">
+          {{ link.toUpperCase() }}
+        </a>
       </li>
     </ul>
   </nav>
@@ -33,5 +44,8 @@ export default {
       @include d-flex("both");
     }
 
+    .active{
+    color:$secondary-color;
+  }
   }
 </style>

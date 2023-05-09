@@ -5,27 +5,29 @@ import {store} from '../data/store'
 
 export default {
   name:'Header',
+
   components:{
     Navbar,
   },
+
   data(){
     return{
-      store
+      store,
     }
-  }
+  },
+  
 }
 </script>
 
 <template>
-  <header class="debug">
-
+  <header>
     <!-- logo -->
-    <div class="logo debug">
-      logo
+    <div class="logo">
+      <img :src="store.logo" alt="Lyricsmus">
     </div>
 
     <!-- navbar -->
-    <nav class="debug">
+    <nav>
       <Navbar
       v-for="link in store.links"
       :key="link"
@@ -49,13 +51,15 @@ export default {
 header{
   @include d-flex("between");
   height:100px;
+  margin:0 30px;
+  font-weight: bold;
   
   .logo{
     @include d-flex("both");
     width: 175px;
     height:100%;
-    
   }
+
 
 }
 
