@@ -1,6 +1,7 @@
 <script>
 
-import Card from './Main-components/Card.vue'
+import Card from './Main-components/Card.vue';
+import Cardimages from './Main-components/Cardimages.vue'
 import {store} from '../data/store'
 
 export default {
@@ -11,7 +12,8 @@ export default {
     }
   },
   components:{
-    Card
+    Card,
+    Cardimages
   },
 }
 </script>
@@ -71,20 +73,25 @@ export default {
       <div class="container-section-img">
         <h3 class="play">play</h3>
         <h1>NEW MUSIC VIDEO</h1>
-        <img src="/public/imgs/assets/Video.jpg" alt="">
+        <img src="/public/imgs/assets/Video.jpg" alt="video">
       </div>
+    </section>
+
+    <section>
+        <div class="section-jazz">
+          <div class="container-text">
+            <h3 class="subtitle">WHO WE ARE</h3>
+            <h1>SENSE THE JAZZ</h1>
+          </div>
+
+          <div class="container-cardsImages">
+            <Cardimages/>
+          </div>
+        </div>
+
     </section>
 
      <!--<section>
-      <div class="container-section">
-        <div class="sense-the-jazz img">
-          <h3 class="subtitle">WHO WE ARE</h3>
-          <h1>SENSE THE JAZZ</h1>
-        </div>
-      </div>
-    </section>
-
-   <section>
       <div class="album-out-now">
         <div class="text">
           <h3 class="subtitle">INSTRUMENTAL ROCK</h3>
@@ -141,6 +148,19 @@ main{
       margin: 20px 0;
       font-size: 60px;
     }
+    }
+
+    .section-jazz{
+      height: 1200px;
+      text-align: center;
+      @include d-flex("column-center");
+
+      .container-cardsImages{
+        width: 70%;
+        border: 1px solid pink;
+        @include d-flex("both");
+        flex-wrap:wrap;
+      }
     }
 
     .container-section-img{
@@ -229,7 +249,7 @@ main{
     
   }
 
-  .sense-the-jazz.img,.best-music-blog{
+  .best-music-blog{
     height: 1200px;
   }
 

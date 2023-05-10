@@ -36,6 +36,41 @@ jumbotron:'/public/image (1).png',
     },
   ],
 
+
+  CardsImage:[
+    {
+      img:'',
+      title:'a roll and bang the floor',
+      // StreamOn:''
+    },
+    {
+      img:'',
+      title:'your melody to our music',
+      // StreamOn:''
+    },
+    {
+      img:'',
+      title:'touching heaven on frequency',
+      // StreamOn:''
+    },
+    {
+      img:'',
+      title:'music makes stronge beats',
+      // StreamOn:''
+    },
+    {
+      img:'',
+      title:'sound is the spark of time',
+      // StreamOn:''
+    },
+    {
+      img:'',
+      title:'make your night groovy',
+      // StreamOn:''
+    },
+  ],
+
+
   // footer
   FooterLinks:[
     {
