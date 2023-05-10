@@ -3,6 +3,7 @@
 import Card from './Main-components/Card.vue';
 import Cardimages from './Main-components/Cardimages.vue';
 import Numbers from './Main-components/Numbers.vue';
+import BestMusic from './Main-components/BestMusic.vue';
 import {store} from '../data/store'
 
 export default {
@@ -15,7 +16,8 @@ export default {
   components:{
     Card,
     Cardimages,
-    Numbers
+    Numbers,
+    BestMusic
   },
 }
 </script>
@@ -132,15 +134,27 @@ export default {
       </div>
     </section>
 
-    <!--<section>
-      <div class="container-section">
-        <div class="best-music-blog">
+    <!-- SECTION BEST MUSIC BLOG -->
+    <section>
+      <div class="section-best-music-blog">
+        <div class="title">
           <h3 class="subtitle">MUSIC BLOG</h3>
           <h1>BEST MUSIC BLOG</h1>
         </div>
 
+        <div class="container-card-blog">
+          <BestMusic
+          v-for="card in store.BestMusicBlog " 
+          :key="card"
+          :img="card.img"
+          :title="card.title"
+          :date="card.date"
+          :text="card.text"
+          />
+        </div>
+
       </div>
-    </section> -->
+    </section>
 
 
   </main>
@@ -204,7 +218,7 @@ main{
     }
     
   }
-  
+  // cards
   .container-cards{
     width:70%;
     @include d-flex("between");
@@ -265,6 +279,10 @@ main{
       @include d-flex("column-center");
       margin:150px 0;
 
+      h1{
+          font-size: 60px;
+        }
+
       .container-cardsImages{
         width: 75%;
         @include d-flex("both");
@@ -272,6 +290,7 @@ main{
       }
     }
 
+// section album
     .section-album{
       position: relative;
 
@@ -284,6 +303,7 @@ main{
       }
     }
 
+    // section numbers
     .container-number{
       @include d-flex("both");
       height:450px;
@@ -303,7 +323,25 @@ main{
         position:absolute;
       }
     }
+    // section best music blog 
+    .section-best-music-blog{
+        height: 1200px;
+        @include d-flex("column-items-center");
+        padding-top:100px;
 
+        .container-card-blog{
+          @include d-flex("horizontal");
+          width: 75%;
+        }
+
+        .title{
+          @include d-flex("column-items-center");
+          
+        }
+        h1{
+          font-size: 60px;
+        }
+      }
     
 }
 
@@ -314,9 +352,6 @@ main{
   
   
 
-  .best-music-blog{
-    height: 1200px;
-  }
 
 
 </style>

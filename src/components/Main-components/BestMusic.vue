@@ -1,15 +1,17 @@
 <script>
 export default {
-  name:'Cardimages',
+  name:'BestMusic',
   props:{
     img:String,
     title:String,
+    date:String,
+    text:String
   }
 }
 </script>
 
 <template>
-    <div class="cardImages">
+  <div class="cardImages">
       <!-- img -->
       <div class="container-img">
         <img :src="img" :alt="title">
@@ -17,13 +19,17 @@ export default {
       <!-- text -->
       <div class="container-text">
         <h3>{{title.toUpperCase()}}</h3>
-        <p>Stream On:</p>
+        <div>{{ date }}</div>
+        <p>{{ text }}</p>
       </div>
     </div>
 </template>
 
+
 <style lang="scss" scoped>
-@use '../scss/Mixin.scss' as *;
+  @use '../scss/Mixin.scss' as *;
+  @use '../scss/Typography.scss' as *;
+
 .cardImages{
   width: calc(90% / 3);
   height: 500px;
@@ -31,20 +37,24 @@ export default {
 
   .container-img{
     width: 100%;
-    height:85%;
+    height:60%;
     @include d-flex("both");
-
+  }
     img{
       width: 100%;
       height:100%;
-      object-fit: cover;
+      object-fit: contain;
     }
-  }
+  
   .container-text{
     margin:15px 0;
-    p{
+    div{
       margin:10px 0;
-      font-size: small;
+      font-size: 15px;
+      color:$secondary-color;
+    }
+    p{
+      font-size: 15px;
     }
   }
 }

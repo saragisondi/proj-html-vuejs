@@ -13,7 +13,7 @@ export default {
   <div class="card">
     <!-- img -->
     <div class="container-img">
-      <img class="speaker" :src="img" :alt="title">
+      <img  :src="img" :alt="title">
     </div>
     <!-- text -->
     <div class="description">
@@ -24,7 +24,7 @@ export default {
     
 </template> 
 
-<style lang="scss">
+<style lang="scss" >
 
 @use '../scss/Typography.scss' as *;
 @use '../scss/Mixin.scss' as *;
@@ -35,14 +35,15 @@ export default {
   width:calc(90% / 3);
   height: 350px;
   background-color: $primary-color;
-    
+  
   .container-img{
     width: 100%;
     height:65%;
     @include d-flex("both");
 
     img{
-      width: 30%;
+      width: 100%;
+      object-fit: contain;
       filter: invert(100%);
     }
 

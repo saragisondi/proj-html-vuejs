@@ -90,6 +90,27 @@ jumbotron:'/public/image (1).png',
 
   ],
 
+  BestMusicBlog:[
+    {
+      img:'/public/imgs/assets/hip_hop_wired_to_dance_make.jpg',
+      title:'hip hop wired to dance make',
+      date:'06 November 2021',
+      text:'driving short music is a music genre that includes traditional folk music and the contemporary genre that evolved from the former',
+    },
+    {
+      img:'/public/imgs/assets/music_business-worldwide.jpg',
+      title:'music business worldwide',
+      date:'27 May 2022',
+      text:'accelerate work and drive productivity the beatles experimentation and creative freedom led other brands to experiment in various ways as well',
+    },
+    {
+      img:'/public/imgs/assets/giveaways_rock.jpg',
+      title:'giveaways rock to all',
+      date:'07 May 2022',
+      text:'signs your car battery has to be replaced when the dashboard lights start flashing, this is a sign the battery is dying. several issues arise and',
+    },
+  ],
+
   // footer
   FooterLinks:[
     {
