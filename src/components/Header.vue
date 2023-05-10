@@ -29,11 +29,14 @@ export default {
   
     <!-- navbar -->
     <nav>
+
       <Navbar
       v-for="link in store.HeaderLinks"
       :key="link"
-      :link="link"
+      :link="link.name"
+      :img="link.img"
       />
+      
       <button>
         <img src="../../public/imgs/assets/image (8).svg" alt="">
       </button>

@@ -8,13 +8,34 @@ jumbotron:'/public/image (1).png',
 
 // header
   HeaderLinks:[
-    'home',
-    'blog',
-    'events',
-    'gallery',
-    'about us',
-    'contact us',
-    'shop'
+    {
+      name:'home',
+      img:""
+    },
+    {
+      name:'blog',
+      img:""
+    },
+    {
+      name:'events',
+      img:'/public/image(7).svg'
+    },
+    {
+      name:'gallery',
+      img:""
+    },
+    {
+      name:'about us',
+      img:""
+    },
+    {
+      name:'contact us',
+      img:""
+    },
+    {
+      name:'shop',
+      img:'/public/imgs/assets/image(7).svg'
+    }, 
   ],
 
   // main
@@ -69,22 +90,22 @@ jumbotron:'/public/image (1).png',
   Numbers:[
     {
       img:'',
-      num:'163',
+      num:163,
       caption:'concerts'
     },
     {
       img:'',
-      num:'145',
+      num:145,
       caption:'happy clients'
     },
     {
       img:'',
-      num:'72',
+      num:72,
       caption:'music awards'
     },
     {
       img:'',
-      num:'182',
+      num:182,
       caption:'total songs'
     },
 

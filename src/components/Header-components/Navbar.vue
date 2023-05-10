@@ -3,6 +3,7 @@ export default {
   name:'Navbar',
   props:{
     link:String,
+    img:String
   },
 
   data(){
@@ -22,6 +23,7 @@ export default {
         :class="{'active' : isActive === true}" 
         @click=" isActive = !isActive">
           {{ link.toUpperCase() }}
+          <img :src="img" alt="">
         </a>
       </li>
     </ul>
@@ -42,10 +44,16 @@ export default {
     
     ul{
       @include d-flex("both");
-    }
 
+    }
+    
     .active{
-    color:$secondary-color;
+      color:$secondary-color;
+    }
   }
+  a{
+    img{
+      filter: invert(100%);
+    }
   }
 </style>

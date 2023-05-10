@@ -39,6 +39,8 @@ export default {
 @use './scss/General.scss' as *;
 @use './scss/Typography.scss' as *;
 
-
+.row{
+  border: 1px solid red;
+}
 
 </style>

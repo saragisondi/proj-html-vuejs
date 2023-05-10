@@ -33,7 +33,7 @@ export default {
         <!-- text -->
         <p 
         v-for="(element,index) in store.link" :key="index">
-        {{link.element}}
+        {{link.element.index}}
       </p>
 
       </li>
