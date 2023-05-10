@@ -17,6 +17,24 @@ jumbotron:'/public/image (1).png',
     'shop'
   ],
 
+  Cards:[
+    {
+      img:'/public/speaker.svg',
+      title:'original ideas',
+      description:'contrary popular belief, lorem ipsum not simplyrandom text.'
+    },
+    {
+      img:'/public/disc.svg',
+      title:'music studio',
+      description:'contrary popular belief, lorem ipsum not simplyrandom text.'
+    },
+    {
+      img:'/public/headphones.svg',
+      title:'acoustic covers',
+      description:'contrary popular belief, lorem ipsum not simplyrandom text.'
+    },
+  ],
+
   FooterLinks:[
     {
       title:'bookings',

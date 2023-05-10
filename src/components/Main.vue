@@ -1,5 +1,6 @@
 <script>
 
+import Card from './Main-components/Card.vue'
 import {store} from '../data/store'
 
 export default {
@@ -8,6 +9,9 @@ export default {
     return{
       store
     }
+  },
+  components:{
+    Card
   }
 }
 </script>
@@ -27,35 +31,15 @@ export default {
           </div>
 
           <div class="container-cards">
-            <div class="card">
-              
-              <div class="container-img">
-                <img class="speaker" src="/public/speaker.svg" alt="cassa">
-              </div>
 
-              <div class="description">
-                <h2>ORIGINAL IDEAS</h2>
-                <p>Contrary popular belief, Lorem Ipsum Not simply ipsum random text. </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="container-img">
-                <img src="/public/disc.svg" alt="music stydio">
-              </div>
-              <div class="description">
-                <h2>MUSIC STUDIO</h2>
-                <p>Contrary popular belief, Lorem Ipsum Not simply ipsum random text. </p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="container-img">
-                <img src="/public/headphones.svg" alt="acoustic cover">
-              </div>
-              <div class="description">
-                <h2>ACOUSTIC COVERS</h2>
-                <p>Contrary popular belief, Lorem Ipsum Not simply ipsum random text. </p>
-              </div>
-            </div>
+            <Card
+            v-for="card in store.Cards" 
+            :key="card"
+            :img="card.img"
+            :title="card.title"
+            :description="card.description"
+            />
+
           </div>
 
         </div>
@@ -188,40 +172,11 @@ main{
     @include d-flex("between");
     position: absolute;
     bottom:-200px;
-
-    .card{
-      width:calc(90% / 3);
-      height: 350px;
-      background-color: $primary-color;
-
-
-      .container-img{
-        width: 100%;
-        height:65%;
-        @include d-flex("both");
-
-        img{
-          width: 30%;
-          filter: invert(100%);
-        }
-
-        .speaker{
-          width: 20%;
-        }
       }
       
-      .description{
-        text-align: center;
-        height:30%;
-
-        p{
-          margin: 10px 65px;
-          font-size: 15px;
-          word-break: break-all;
-        }
-      }
+      
     }
-  }
+  
   .subtitle{
     color:$secondary-color;
     
@@ -253,6 +208,6 @@ main{
   .sense-the-jazz.img,.best-music-blog{
     height: 1200px;
   }
-}
+
 
 </style>
