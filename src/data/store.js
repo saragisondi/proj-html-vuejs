@@ -37,39 +37,58 @@ jumbotron:'/public/image (1).png',
   ],
 
 
-  CardsImage:[
+  CardsImages:[
     {
-      img:'',
+      img:'/public/imgs/assets/gallery1.jpg',
       title:'a roll and bang the floor',
-      // StreamOn:''
+      StreamOn:'Stream On:'
     },
     {
-      img:'',
+      img:'/public/imgs/assets/gallery2.jpg',
       title:'your melody to our music',
-      // StreamOn:''
+      StreamOn:'Stream On:'
     },
     {
-      img:'',
+      img:'/public/imgs/assets/gallery3.jpg',
       title:'touching heaven on frequency',
-      // StreamOn:''
     },
     {
-      img:'',
+      img:'/public/imgs/assets/gallery4.jpg',
       title:'music makes stronge beats',
-      // StreamOn:''
     },
     {
-      img:'',
+      img:'/public/imgs/assets/gallery5.jpg',
       title:'sound is the spark of time',
-      // StreamOn:''
     },
     {
-      img:'',
+      img:'/public/imgs/assets/gallery6.jpg',
       title:'make your night groovy',
-      // StreamOn:''
     },
   ],
 
+  Numbers:[
+    {
+      img:'',
+      num:'163',
+      caption:'concerts'
+    },
+    {
+      img:'',
+      num:'145',
+      caption:'happy clients'
+    },
+    {
+      img:'',
+      num:'72',
+      caption:'music awards'
+    },
+    {
+      img:'',
+      num:'182',
+      caption:'total songs'
+    },
+
+  ],
 
   // footer
   FooterLinks:[

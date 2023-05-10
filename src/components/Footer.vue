@@ -25,7 +25,7 @@ export default {
         <!-- TOFIX -->
         <Column
           :title="store.title"
-          :text="store.text"
+          :text="store.element"
         />
       </div>
     </div>

@@ -1,7 +1,8 @@
 <script>
 
 import Card from './Main-components/Card.vue';
-import Cardimages from './Main-components/Cardimages.vue'
+import Cardimages from './Main-components/Cardimages.vue';
+import Numbers from './Main-components/Numbers.vue';
 import {store} from '../data/store'
 
 export default {
@@ -13,7 +14,8 @@ export default {
   },
   components:{
     Card,
-    Cardimages
+    Cardimages,
+    Numbers
   },
 }
 </script>
@@ -77,6 +79,7 @@ export default {
       </div>
     </section>
 
+    <!-- SECTION JAZZ -->
     <section>
         <div class="section-jazz">
           <div class="container-text">
@@ -84,23 +87,52 @@ export default {
             <h1>SENSE THE JAZZ</h1>
           </div>
 
+          <!-- CARDS IMAGES -->
           <div class="container-cardsImages">
-            <Cardimages/>
+            <Cardimages
+            v-for="cardImage in store.CardsImages"
+            :key="cardImage"
+            :img="cardImage.img"
+            :title="cardImage.title"
+            />
           </div>
         </div>
 
     </section>
 
-     <!--<section>
-      <div class="album-out-now">
-        <div class="text">
+    <!--SECTION ALBUM OUT NOW -->
+    <section>
+      <div class="section-album">
+        <div class="container-text">
           <h3 class="subtitle">INSTRUMENTAL ROCK</h3>
           <h1>ALBUM OUT NOW</h1>
+          <button>READ MORE</button>
         </div>
+        <img src="/public/imgs/assets/cms_parallax.jpg" alt="">
       </div>
     </section>
 
+    <!--SECTION NUMBERS -->
     <section>
+      <div class="container-number">
+
+        <div class="row">
+
+          <Numbers
+          v-for="element in store.Numbers"
+          :key="element"
+          :img="element.img"
+          :num="element.num"
+          :caption="element.caption"
+          />
+        
+        </div>
+
+        <img src="/public/imgs/assets/counter_parallax.jpg" alt="">
+      </div>
+    </section>
+
+    <!--<section>
       <div class="container-section">
         <div class="best-music-blog">
           <h3 class="subtitle">MUSIC BLOG</h3>
@@ -148,44 +180,10 @@ main{
       margin: 20px 0;
       font-size: 60px;
     }
-    }
-
-    .section-jazz{
-      height: 1200px;
-      text-align: center;
-      @include d-flex("column-center");
-
-      .container-cardsImages{
-        width: 70%;
-        border: 1px solid pink;
-        @include d-flex("both");
-        flex-wrap:wrap;
-      }
-    }
-
-    .container-section-img{
-      width: 100%;
-      height:600px;
-      position: relative;
-      @include d-flex("column-center");
-      h1{
-        font-size: 60px;
-        position:absolute;
-      }
-      img{
-        width: 100%;
-        height:600px;
-        object-fit: cover;
-      }
-      .play{
-        position:absolute;
-        top:180px;
-      }
-    }
-    
   }
 
-  .container-jumbotron{
+    // section jumbotron
+    .container-jumbotron{
     height:800px;
     .jumbotron{
       width: 100%;
@@ -206,17 +204,13 @@ main{
     }
     
   }
-
   
-
   .container-cards{
     width:70%;
     @include d-flex("between");
     position: absolute;
     bottom:-200px;
       }
-      
-      
     }
   
   .subtitle{
@@ -224,6 +218,7 @@ main{
     
   }
 
+// section jazz text
   .sense-the-jazz.description{
     width: 43%;
     height:700px;
@@ -241,13 +236,83 @@ main{
     }
   }
 
-  
-  .album-out-now{
-    height:500px;
-    // @include d-flex("both")
+    // section img
+    .container-section-img{
+      width: 100%;
+      height:600px;
+      position: relative;
+      @include d-flex("column-center");
+      h1{
+        font-size: 60px;
+        position:absolute;
+
+      }
+      img{
+        width: 100%;
+        height:600px;
+        object-fit: cover;
+      }
+      .play{
+        position:absolute;
+        top:180px;
+      }
+    }
+
+    // section jazz cards imgs
+    .section-jazz{
+      height: 1200px;
+      text-align: center;
+      @include d-flex("column-center");
+      margin:150px 0;
+
+      .container-cardsImages{
+        width: 75%;
+        @include d-flex("both");
+        flex-wrap:wrap;
+      }
+    }
+
+    .section-album{
+      position: relative;
+
+      .container-text{
+        position: absolute;
+        top:250px;
+        left:250px;
+        width:50%;
+        height:300px;
+      }
+    }
+
+    .container-number{
+      @include d-flex("both");
+      height:450px;
+      position: relative;
+      
+      img{
+        width: 100%;
+        height:450px;
+        object-fit: cover;
+        object-position:top;
+      }
+      
+      .row{
+        width: 70%;
+        @include d-flex("between");
+        text-align: center;
+        position:absolute;
+      }
+    }
 
     
-  }
+}
+
+
+  
+
+
+  
+  
 
   .best-music-blog{
     height: 1200px;
