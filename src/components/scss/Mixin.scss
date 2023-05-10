@@ -14,5 +14,9 @@
   }@else if $type == "column"{
     flex-direction: column;
     justify-content: end;
+  }@else if $type == "column-center"{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 }

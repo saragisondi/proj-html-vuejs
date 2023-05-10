@@ -17,7 +17,7 @@ export default {
     </div>
     <!-- text -->
     <div class="description">
-      <h2>{{title}}</h2>
+      <h2>{{title.toUpperCase()}}</h2>
       <p>{{description}}</p>
     </div>
   </div>
@@ -32,34 +32,36 @@ export default {
 
 
 .card{
-      width:calc(90% / 3);
-      height: 350px;
-      background-color: $primary-color;
+  width:calc(90% / 3);
+  height: 350px;
+  background-color: $primary-color;
     
-      .container-img{
-        width: 100%;
-        height:65%;
-        @include d-flex("both");
+  .container-img{
+    width: 100%;
+    height:65%;
+    @include d-flex("both");
 
-        img{
-          width: 30%;
-          filter: invert(100%);
-        }
-
-        .speaker{
-          width: 20%;
-        }
+    img{
+      width: 30%;
+      filter: invert(100%);
     }
 
-    .description{
-        text-align: center;
-        height:30%;
-
-        p{
-          margin: 10px 65px;
-          font-size: 15px;
-          word-break: break-all;
-        }
-      }
+    .speaker{
+      width: 20%;
+    }
   }
+
+  .description{
+    text-align: center;
+    height:30%;
+
+    p{
+      margin: 10px 65px;
+      font-size: 15px;
+      word-break: break-all;
+      text-transform: capitalize;
+    }
+  }
+}
+
 </style>

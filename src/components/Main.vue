@@ -12,24 +12,28 @@ export default {
   },
   components:{
     Card
-  }
+  },
 }
 </script>
 
 <template>
   <main>
 
+    <!-- JUMBOTRON -->
     <section>
       <div class="container-jumbotron">
         <div class="jumbotron">
+          <!-- img -->
           <img class="img-jumbotron" :src="store.jumbotron" alt="image-jumbotron">
-
+          <!-- text -->
           <div class="text">
             <h3 class="subtitle">INSTRUMENTAL ROCK</h3>
             <h1>MUSIC IN THIS VIDEO</h1>
+            <!-- button -->
             <button>READ MORE</button>
           </div>
 
+          <!-- cards -->
           <div class="container-cards">
 
             <Card
@@ -47,6 +51,7 @@ export default {
 
     </section>
 
+    <!-- SENSE THE JAZZ description -->
     <section>
       <div class="container-section">
         <div class="sense-the-jazz description">
@@ -60,15 +65,17 @@ export default {
       </div>
     </section>
 
+
+    <!-- NEW MUSIC VIDEO  -->
     <section>
-      <div class="container-section">
-        <div class="new-music-video">
-          <h1>NEW MUSIC VIDEO</h1>
-        </div>
+      <div class="container-section-img">
+        <h3 class="play">play</h3>
+        <h1>NEW MUSIC VIDEO</h1>
+        <img src="/public/imgs/assets/Video.jpg" alt="">
       </div>
     </section>
 
-    <section>
+     <!--<section>
       <div class="container-section">
         <div class="sense-the-jazz img">
           <h3 class="subtitle">WHO WE ARE</h3>
@@ -77,7 +84,7 @@ export default {
       </div>
     </section>
 
-    <section>
+   <section>
       <div class="album-out-now">
         <div class="text">
           <h3 class="subtitle">INSTRUMENTAL ROCK</h3>
@@ -94,7 +101,7 @@ export default {
         </div>
 
       </div>
-    </section>
+    </section> -->
 
 
   </main>
@@ -110,6 +117,11 @@ export default {
 
 main{
   margin-top:100px;
+
+  h1{
+    font-size: 100px;
+    margin:50px 0;
+  }
 
   button{
     border-style: none;
@@ -130,13 +142,31 @@ main{
       font-size: 60px;
     }
     }
+
+    .container-section-img{
+      width: 100%;
+      height:600px;
+      position: relative;
+      @include d-flex("column-center");
+      h1{
+        font-size: 60px;
+        position:absolute;
+      }
+      img{
+        width: 100%;
+        height:600px;
+        object-fit: cover;
+      }
+      .play{
+        position:absolute;
+        top:180px;
+      }
+    }
     
   }
 
   .container-jumbotron{
     height:800px;
-
-    
     .jumbotron{
       width: 100%;
       height:900px;
@@ -148,24 +178,16 @@ main{
         height:900px;
         object-fit: cover;
       }
-      
-      
-
-    .text{
-    text-align: center;
-    position: absolute;
-    top:200px;
-  }
-
+      .text{
+        text-align: center;
+        position: absolute;
+        top:200px;
+      }
     }
     
   }
 
   
-  h1{
-    font-size: 100px;
-    margin:50px 0;
-  }
 
   .container-cards{
     width:70%;
@@ -187,7 +209,7 @@ main{
     height:700px;
     text-align: center;
     @include d-flex("column");
-    margin-bottom:100px;
+    margin:100px;
 
     h1{
       margin: 20px 0;
@@ -199,10 +221,12 @@ main{
     }
   }
 
-  .new-music-video, .album-out-now{
+  
+  .album-out-now{
     height:500px;
-    @include d-flex("both")
+    // @include d-flex("both")
 
+    
   }
 
   .sense-the-jazz.img,.best-music-blog{

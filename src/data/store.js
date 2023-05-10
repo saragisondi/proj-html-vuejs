@@ -6,7 +6,7 @@ export const store = reactive ({
 logo:'/public/imgs/assets/Logo.png',
 jumbotron:'/public/image (1).png',
 
-
+// header
   HeaderLinks:[
     'home',
     'blog',
@@ -17,6 +17,7 @@ jumbotron:'/public/image (1).png',
     'shop'
   ],
 
+  // main
   Cards:[
     {
       img:'/public/speaker.svg',
@@ -35,6 +36,7 @@ jumbotron:'/public/image (1).png',
     },
   ],
 
+  // footer
   FooterLinks:[
     {
       title:'bookings',
