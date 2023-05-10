@@ -18,12 +18,46 @@ export default {
     <section>
       <div class="container-jumbotron">
         <div class="jumbotron">
-          <img :src="store.jumbotron" alt="image-jumbotron">
+          <img class="img-jumbotron" :src="store.jumbotron" alt="image-jumbotron">
+
           <div class="text">
             <h3 class="subtitle">INSTRUMENTAL ROCK</h3>
             <h1>MUSIC IN THIS VIDEO</h1>
             <button>READ MORE</button>
           </div>
+
+          <div class="container-cards">
+            <div class="card">
+              
+              <div class="container-img">
+                <img class="speaker" src="/public/speaker.svg" alt="cassa">
+              </div>
+
+              <div class="description">
+                <h2>ORIGINAL IDEAS</h2>
+                <p>Contrary popular belief, Lorem Ipsum Not simply ipsum random text. </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="container-img">
+                <img src="/public/disc.svg" alt="music stydio">
+              </div>
+              <div class="description">
+                <h2>MUSIC STUDIO</h2>
+                <p>Contrary popular belief, Lorem Ipsum Not simply ipsum random text. </p>
+              </div>
+            </div>
+            <div class="card">
+              <div class="container-img">
+                <img src="/public/headphones.svg" alt="acoustic cover">
+              </div>
+              <div class="description">
+                <h2>ACOUSTIC COVERS</h2>
+                <p>Contrary popular belief, Lorem Ipsum Not simply ipsum random text. </p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
@@ -70,11 +104,11 @@ export default {
 
     <section>
       <div class="container-section">
+        <div class="best-music-blog">
+          <h3 class="subtitle">MUSIC BLOG</h3>
+          <h1>BEST MUSIC BLOG</h1>
+        </div>
 
-      </div>
-      <div class="best-music-blog">
-        <h3 class="subtitle">MUSIC BLOG</h3>
-        <h1>BEST MUSIC BLOG</h1>
       </div>
     </section>
 
@@ -107,6 +141,10 @@ main{
     border:1px solid red;
     .container-section{
       @include d-flex("both");
+      h1{
+      margin: 20px 0;
+      font-size: 60px;
+    }
     }
     
   }
@@ -114,32 +152,76 @@ main{
   .container-jumbotron{
     height:800px;
 
-
+    
     .jumbotron{
       width: 100%;
       height:900px;
       position: relative;
       border:1px solid green;
       @include d-flex("both");
-  
-      img{
+      .img-jumbotron{
         width: 100%;
         height:900px;
         object-fit: cover;
       }
+      
+      
+
+    .text{
+    text-align: center;
+    position: absolute;
+    top:200px;
+  }
 
     }
     
   }
-  .text{
-    text-align: center;
-    position: absolute;
-    h1{
-      font-size: 60px;
-    }
 
-  }
   
+  h1{
+    font-size: 100px;
+    margin:50px 0;
+  }
+
+  .container-cards{
+    width:70%;
+    @include d-flex("between");
+    position: absolute;
+    bottom:-200px;
+
+    .card{
+      width:calc(90% / 3);
+      height: 350px;
+      background-color: $primary-color;
+
+
+      .container-img{
+        width: 100%;
+        height:65%;
+        @include d-flex("both");
+
+        img{
+          width: 30%;
+          filter: invert(100%);
+        }
+
+        .speaker{
+          width: 20%;
+        }
+      }
+      
+      .description{
+        text-align: center;
+        height:30%;
+
+        p{
+          margin: 10px 65px;
+          font-size: 15px;
+          word-break: break-all;
+        }
+      }
+    }
+  }
   .subtitle{
     color:$secondary-color;
     
@@ -149,8 +231,17 @@ main{
     width: 43%;
     height:700px;
     text-align: center;
-    @include d-flex("both")
+    @include d-flex("column");
+    margin-bottom:100px;
 
+    h1{
+      margin: 20px 0;
+      font-size: 60px;
+    }
+
+    p{
+      margin: 50px 0;
+    }
   }
 
   .new-music-video, .album-out-now{
