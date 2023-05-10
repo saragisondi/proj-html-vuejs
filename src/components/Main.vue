@@ -4,6 +4,7 @@ import Card from './Main-components/Card.vue';
 import Cardimages from './Main-components/Cardimages.vue';
 import Numbers from './Main-components/Numbers.vue';
 import BestMusic from './Main-components/BestMusic.vue';
+import Swiper from './Main-components/Swiper.vue'
 import {store} from '../data/store'
 
 export default {
@@ -17,7 +18,8 @@ export default {
     Card,
     Cardimages,
     Numbers,
-    BestMusic
+    BestMusic,
+    Swiper
   },
 }
 </script>
@@ -156,6 +158,19 @@ export default {
       </div>
     </section>
 
+    <!-- SWIPER -->
+    <section>
+      <div class="container-swiper">
+        <div class="container-imgs">
+
+          <Swiper
+          v-for="image in store.images" :key="image"
+          :img="image.img"
+          />
+
+        </div>
+      </div>
+    </section>
 
   </main>
 </template>
@@ -187,7 +202,6 @@ main{
   }
 
   section{
-    border:1px solid red;
     .container-section{
       @include d-flex("both");
       h1{
@@ -325,9 +339,10 @@ main{
     }
     // section best music blog 
     .section-best-music-blog{
-        height: 1200px;
+        
         @include d-flex("column-items-center");
         padding-top:100px;
+
 
         .container-card-blog{
           @include d-flex("horizontal");
@@ -340,6 +355,14 @@ main{
         }
         h1{
           font-size: 60px;
+        }
+      }
+
+      // section swiper 
+      .container-swiper{
+        height:250px;
+        .container-imgs{
+          @include d-flex("horizontal")
         }
       }
     

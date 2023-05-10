@@ -111,6 +111,29 @@ jumbotron:'/public/image (1).png',
     },
   ],
 
+  images:[
+    {img:'/public/imgs/assets/instagram_img1.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img2.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img3.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img4.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img5.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img6.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img7.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img8.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img9.jpg'
+    },
+    {img:'/public/imgs/assets/instagram_img10.jpg'
+    },
+  ],
+
   // footer
   FooterLinks:[
     {

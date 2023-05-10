@@ -35,7 +35,7 @@ export default {
       :link="link"
       />
       <button>
-        cerca
+        <img src="../../public/imgs/assets/image (8).svg" alt="">
       </button>
     </nav>
 
@@ -68,7 +68,10 @@ header{
   }
 
   button{
-    margin: 0 20px;
+    margin-right: 30px ;
+    border-style:none;
+    width: 80px;
+    filter: invert(100%);
   }
 
 
