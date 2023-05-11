@@ -45,6 +45,18 @@ export default {
       height:100%;
       object-fit: contain;
     }
+
+    //HOVER
+    .container-img:hover{
+      width: 105%;
+      height:255px;
+      transition:.5s;
+    }
+    img:hover{
+      width: 105%;
+      height:105%;
+      transition:.5s;
+    }
   
   .container-text{
     margin:15px 0;
@@ -57,6 +69,10 @@ export default {
       font-size: 15px;
       text-transform: capitalize;
       line-height: 1.5rem;
+    }
+
+    h3:hover{
+      color:$secondary-color;
     }
   }
 }

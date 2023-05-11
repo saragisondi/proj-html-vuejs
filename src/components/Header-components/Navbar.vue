@@ -1,14 +1,23 @@
 <script>
+
+import DropdownMenu from './DropdownMenu.vue';
+import { store } from '../../data/store';
+
 export default {
   name:'Navbar',
+  components:{
+    DropdownMenu
+  },
+
   props:{
     link:String,
-    img:String
+    img:String,
   },
 
   data(){
     return{
       isActive:false,
+      store
     }
   },
 
@@ -28,6 +37,12 @@ export default {
       </li>
     </ul>
   </nav>
+  
+  <DropdownMenu
+    
+  
+  />
+
 </template>
 
 
@@ -43,8 +58,9 @@ export default {
     
     ul{
       @include d-flex("both");
-
+      
       li{
+        position: relative;
         a{
           margin:0 15px;
         }

@@ -29,6 +29,16 @@ export default {
         <Column
         :elements="store.FooterLinks"
         />
+
+        <div class="icon">
+          <div>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+          </div>
+        
+        </div>
       </div>
     </div>
 
@@ -48,12 +58,26 @@ export default {
 .row{
   @include d-flex("between");
   padding-bottom:100px;
+  position:relative;
+  .icon{
+    position: absolute;
+    bottom:150px;
+    i{
+      margin:0 10px;
+    }
+  }
 }
+
 
 .copyright{
   @include d-flex();
   border-top:1px solid #222222;
   padding: 30px 0;
+}
+
+//HOVER
+i:hover{
+  color:$secondary-color;
 }
 
 </style>

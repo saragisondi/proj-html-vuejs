@@ -33,19 +33,12 @@ export default {
         <p 
         v-for="(link,index) in element.text" :key="index">
         {{link}}
-      </p>
+        </p>
 
-      <!-- icons -->
-      <p
-      v-for="icon in element.icons"
-      :key="icon">
-      {{ icon }}
-    </p>
-
-      
     </li>
   </ul>
 </div>
+
 
 <div class="col-footer">
   <h2>NEWSLETTER</h2>
@@ -55,7 +48,6 @@ export default {
   </form>
   <button>SEND MESSAGE</button>
 </div>
-
 
 </template>
 
@@ -88,6 +80,7 @@ export default {
     border:1px solid #222222;
     background-color: $primary-color;
     color:#3F3D3D;
+    outline: none;
   }
   button{
     margin-top: 20px;
@@ -96,6 +89,18 @@ export default {
   button:hover{
     background-color: $secondary-color;
 }
+
+}
+.col-footer:first-child{
+  p:last-child:hover{
+    color:$secondary-color;
+  }
+ 
+}
+.col-footer:nth-child(2), .col-footer:nth-child(3){
+  p:hover{
+    color: $secondary-color;
+  }
 }
 
 </style>

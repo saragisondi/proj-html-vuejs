@@ -18,11 +18,11 @@ export default {
       <div class="container-text">
         <h3>{{title.toUpperCase()}}</h3>
         <p>Stream On:
-          <i class="fa-brands fa-spotify" style="color: #ffffff;"></i>
-          <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
-          <i class="fa-solid fa-music" style="color: #ffffff;"></i>
-          <i class="fa-solid fa-cloud" style="color: #ffffff;"></i>
-          <i class="fa-solid fa-compass" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-spotify"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-solid fa-music"></i>
+          <i class="fa-solid fa-cloud"></i>
+          <i class="fa-solid fa-compass"></i>
         </p>
 
           
@@ -32,6 +32,8 @@ export default {
 
 <style lang="scss" scoped>
 @use '../scss/Mixin.scss' as *;
+@use '../scss/Typography.scss' as *;
+
 .cardImages{
   width: calc(85% / 3);
   height: 500px;
@@ -64,6 +66,11 @@ export default {
       font-size: small;
       i{
         margin:0 10px;
+        color: #ffffff;
+      }
+
+      i:hover{
+        color:$secondary-color;
       }
     }
   }

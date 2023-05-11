@@ -16,7 +16,8 @@ jumbotron:'/public/image (1).png',
     },
     {
       name:'events',
-      img:'/icons8-chevron-down-24.png'
+      img:'/icons8-chevron-down-24.png',
+  
     },
     {
       name:'gallery',
@@ -30,9 +31,28 @@ jumbotron:'/public/image (1).png',
     {
       name:'shop',
       img:'/icons8-chevron-down-24.png'
+      
     }, 
   ],
 
+  //Dropdown
+  EventsLink:[
+    {
+      list:'musica corale'
+    },
+    {
+      list:'banda concertistica'
+    },
+    {
+      list:"concerti d'opera"
+    },
+    {
+      list:'orchestra sinfonica'
+    },
+    {
+      list:'concerti per famiglie'
+    },
+  ],
   // main
   Cards:[
     {
@@ -158,9 +178,7 @@ jumbotron:'/public/image (1).png',
         '502 New Design Str, Melbourne, San Francisco, CA 94110, United States Of America Australia',
         'T:1123-456-789',
         'Email:demo@example.com',
-        'ICON'
       ],
-      
     },
     {
       title:'information',

@@ -44,5 +44,10 @@ export default {
       width: 35%;
       object-fit: cover;
     }
+
+    img:hover{
+      filter: brightness(0) saturate(100%) invert(51%) sepia(73%) saturate(799%) hue-rotate(357deg) brightness(98%) contrast(94%);
+    }
+    
   }
 </style>
