@@ -92,6 +92,10 @@ export default {
   button{
     margin-top: 20px;
   }
+  // HOVER
+  button:hover{
+    background-color: $secondary-color;
+}
 }
 
 </style>

@@ -19,7 +19,7 @@ export default {
       <!-- text -->
       <div class="container-text">
         <h3>{{title.toUpperCase()}}</h3>
-        <div>{{ date }}</div>
+        <div><i class="fa-solid fa-calendar-days" style="color: #f2870c;"></i> {{ date }}</div>
         <p>{{ text }}</p>
       </div>
     </div>

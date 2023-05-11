@@ -16,7 +16,7 @@ jumbotron:'/public/image (1).png',
     },
     {
       name:'events',
-      img:'/public/image(7).svg'
+      img:'/icons8-chevron-down-24.png'
     },
     {
       name:'gallery',
@@ -29,7 +29,7 @@ jumbotron:'/public/image (1).png',
     },
     {
       name:'shop',
-      img:'/public/image(7).svg'
+      img:'/icons8-chevron-down-24.png'
     }, 
   ],
 
@@ -84,22 +84,22 @@ jumbotron:'/public/image (1).png',
 
   Numbers:[
     {
-      img:'',
+      img:'/icons8-arms-up-100.png',
       num:163,
       caption:'concerts'
     },
     {
-      img:'',
+      img:'/icons8-spaceship-100.png',
       num:145,
       caption:'happy clients'
     },
     {
-      img:'',
+      img:'/icons8-trophy-100.png',
       num:72,
       caption:'music awards'
     },
     {
-      img:'',
+      img:'/icons8-music-104.png',
       num:182,
       caption:'total songs'
     },
@@ -158,9 +158,9 @@ jumbotron:'/public/image (1).png',
         '502 New Design Str, Melbourne, San Francisco, CA 94110, United States Of America Australia',
         'T:1123-456-789',
         'Email:demo@example.com',
+        'ICON'
       ],
-      icons:[
-      ]
+      
     },
     {
       title:'information',

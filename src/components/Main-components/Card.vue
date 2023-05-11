@@ -24,7 +24,7 @@ export default {
     
 </template> 
 
-<style lang="scss" scoped>
+<style lang="scss" >
 
 @use '../scss/Typography.scss' as *;
 @use '../scss/Mixin.scss' as *;
@@ -42,11 +42,11 @@ export default {
     @include d-flex("both");
 
     img{
-      width: 100%;
-      object-fit: contain;
       filter: invert(100%);
     }
 
+     
+ 
     .speaker{
       width: 20%;
     }
@@ -63,6 +63,12 @@ export default {
       text-transform: capitalize;
     }
   }
+
+
+  img:hover{
+    filter: brightness(0) saturate(100%) invert(51%) sepia(73%) saturate(799%) hue-rotate(357deg) brightness(98%) contrast(94%);
+  }
 }
+
 
 </style>

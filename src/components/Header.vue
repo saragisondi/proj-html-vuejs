@@ -68,13 +68,18 @@ header{
     width: 175px;
     height:100%;
     margin:0 20px;
+    cursor: pointer;
   }
 
   button{
     margin-right: 30px ;
     border-style:none;
-    filter: invert(100%);
-    background-color:$tertiary-color;
+    img{
+      filter: invert(100%);
+    }
+    img:hover{
+      filter: brightness(0) saturate(100%) invert(51%) sepia(73%) saturate(799%) hue-rotate(357deg) brightness(98%) contrast(94%);
+    }
   }
 
 

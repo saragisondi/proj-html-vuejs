@@ -77,7 +77,11 @@ export default {
     <!-- NEW MUSIC VIDEO  -->
     <section>
       <div class="container-section-img">
-        <button class="play">play</button>
+
+          <div class="play">
+            <i class="fa-solid fa-play" style="color: #f2870c;"></i>
+          </div>
+
         <h1>NEW MUSIC VIDEO</h1>
         <img src="/public/imgs/assets/Video.jpg" alt="video">
       </div>
@@ -273,12 +277,16 @@ main{
       .play{
         position:absolute;
         top:180px;
-        border:3px solid $secondary-color;
-        width: 50px;
+        width: 70px;
         height: 70px;
-        border-radius:50px;
-        color:$secondary-color;
-        @include d-flex("both")
+        border-radius:50%;
+        border: 2px solid $secondary-color;
+        @include d-flex("both");
+        cursor: pointer;
+        
+        i{
+          font-size: 20px;
+        }
       }
     }
 
@@ -297,6 +305,7 @@ main{
         width: 75%;
         @include d-flex("both");
         flex-wrap:wrap;
+
       }
     }
 
@@ -362,14 +371,17 @@ main{
         }
       }
     
+      // HOVER
+      button:hover{
+        background-color: $secondary-color;
+    }
 }
 
 
   
 
 
-  
-  
+ 
 
 
 

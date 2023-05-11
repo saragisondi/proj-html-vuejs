@@ -39,11 +39,9 @@ export default {
 }
   .container-img{
     width: 70%;
-    height: 90px;
 
     img{
-      width: 100%;
-      height: 60%;
+      width: 35%;
       object-fit: cover;
     }
   }

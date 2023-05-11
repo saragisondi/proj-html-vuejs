@@ -21,8 +21,9 @@ export default {
   <Footer/>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
   @use './components/scss/General.scss' as *;
   @use './components/scss/Typography.scss' as *;
   @use './components/scss/Mixin.scss' as *;
+
 </style>

@@ -17,7 +17,15 @@ export default {
       <!-- text -->
       <div class="container-text">
         <h3>{{title.toUpperCase()}}</h3>
-        <p>Stream On:</p>
+        <p>Stream On:
+          <i class="fa-brands fa-spotify" style="color: #ffffff;"></i>
+          <i class="fa-brands fa-youtube" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-music" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-cloud" style="color: #ffffff;"></i>
+          <i class="fa-solid fa-compass" style="color: #ffffff;"></i>
+        </p>
+
+          
       </div>
     </div>
 </template>
@@ -39,6 +47,12 @@ export default {
       height:100%;
       object-fit: cover;
     }
+
+    img:hover{
+      width: 105%;
+      height:105%;
+      transition:.5s  ;
+    }
   }
   .container-text{
     margin:15px 0;
@@ -48,6 +62,9 @@ export default {
     p{
       margin:10px 0;
       font-size: small;
+      i{
+        margin:0 10px;
+      }
     }
   }
 }

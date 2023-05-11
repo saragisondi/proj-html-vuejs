@@ -48,12 +48,27 @@ export default {
         a{
           margin:0 15px;
         }
+        
+        img{
+          width: 10px;
+        }
       }
     }
     
+    //ACTIVE
     .active{
       color:$secondary-color;
     }
+
+    //HOVER
+    a:hover{
+      color:$secondary-color;  
+    }
+
+    img:hover{
+      filter: brightness(0) saturate(100%) invert(51%) sepia(73%) saturate(799%) hue-rotate(357deg) brightness(98%) contrast(94%);
+    }
+
   }
 
 </style>
