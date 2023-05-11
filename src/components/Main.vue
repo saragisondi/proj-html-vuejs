@@ -30,9 +30,12 @@ export default {
     <!-- JUMBOTRON -->
     <section>
       <div class="container-jumbotron">
+
         <div class="jumbotron">
           <!-- img -->
-          <img class="img-jumbotron" :src="store.jumbotron" alt="image-jumbotron">
+          <img class="img-jumbotron-1" src="/public/image (1).png" alt="image-jumbotron">
+          <img class="img-jumbotron-2" src="/public/image.png" alt="image-jumbotron">
+
           <!-- text -->
           <div class="text">
             <h3 class="subtitle">INSTRUMENTAL ROCK</h3>
@@ -213,11 +216,24 @@ main{
       position: relative;
       border:1px solid green;
       @include d-flex("both");
-      .img-jumbotron{
+      .img-jumbotron-1,.img-jumbotron-2{
         width: 100%;
         height:900px;
+        position: absolute;
         object-fit: cover;
       }
+
+      .img-jumbotron-2{
+        opacity:0;
+        transition:2s;
+      }
+
+
+      .img-jumbotron-2:hover{
+        opacity:1;
+        transition:2s;
+      }
+
       .text{
         text-align: center;
         position: absolute;

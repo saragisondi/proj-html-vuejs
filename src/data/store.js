@@ -4,7 +4,7 @@ export const store = reactive ({
 
 // img
 logo:'/public/imgs/assets/Logo.png',
-jumbotron:'/public/image (1).png',
+// jumbotron:'/public/image (1).png',
 
 // header
   HeaderLinks:[
