@@ -1,13 +1,8 @@
 <script>
-
-import DropdownMenu from './DropdownMenu.vue';
 import { store } from '../../data/store';
 
 export default {
   name:'Navbar',
-  components:{
-    DropdownMenu
-  },
 
   props:{
     link:String,
@@ -25,26 +20,15 @@ export default {
 </script>
 
 <template>
-  <nav>
-    <ul>
-      <li>
-        <a href="#"
-        :class="{'active' : isActive === true}" 
-        @click=" isActive = !isActive">
-          {{ link.toUpperCase() }}
-          <img :src="img" alt="">
-        </a>
-      </li>
-    </ul>
-  </nav>
   
-  <div class="dropdown">
-    <DropdownMenu
-      v-for="dropdownList in store.EventsLink"
-        :key="dropdownList"
-        :list="dropdownList.list"
-    />
-  </div>
+    <a href="#"
+    :class="{'active' : isActive === true}" 
+    @click=" isActive = !isActive">
+    {{ link.toUpperCase() }}
+      <img :src="img" alt="">
+
+
+    </a>
 
 </template>
 
@@ -54,34 +38,11 @@ export default {
 @use '../scss/Typography.scss' as *;
 @use '../scss/Mixin.scss' as *;
 
-
-  nav{
-    @include d-flex("both");
-    height:100%;
     
-    ul{
-      @include d-flex("both");
-      
-      li{
-        position: relative;
-        a{
-          margin:0 15px;
-        }
-        
-        img{
-          width: 10px;
-        }
-      }
+    a{
+      margin:0 15px;
     }
     
-    .dropdown{
-    border: 1px solid pink;
-    position: absolute;
-    top:55px;
-    left:815px;
-    background-color: $primary-color;
-    
-  }
     //ACTIVE
     .active{
       color:$secondary-color;
@@ -89,13 +50,9 @@ export default {
 
     //HOVER
     a:hover{
-      color:$secondary-color;  
+      color:$secondary-color;
     }
 
-    img:hover{
-      filter: brightness(0) saturate(100%) invert(51%) sepia(73%) saturate(799%) hue-rotate(357deg) brightness(98%) contrast(94%);
-    }
 
-  }
 
 </style>

@@ -2,7 +2,7 @@ import {reactive} from 'vue';
 
 export const store = reactive ({
 
-  // img
+// img
 logo:'/public/imgs/assets/Logo.png',
 jumbotron:'/public/image (1).png',
 
@@ -38,30 +38,66 @@ jumbotron:'/public/image (1).png',
   //Dropdown
   EventsLink:[
     {
-      list:'musica corale'
+      list:'choral music'
     },
     {
-      list:'banda concertistica'
+      list:'concert band'
     },
     {
-      list:"concerti d'opera"
+      list:"opera concerts"
     },
     {
-      list:'orchestra sinfonica'
+      list:'symphony orchestra'
     },
     {
-      list:'concerti per famiglie'
+      list:'family concerts'
     },
   ],
 
-ShopLink:[
-  {
-    list:''
-  }
-]
+  ShopLink:[
+    {
+      list:'product type'
+    },
+    {
+      list:'shop page'
+    }
+  ],
 
+  TypeOfProducts:[
+{
+  list:'simple product'
+},
+{
+  list:'external/affiliate product'
+},
+{
+  list:'downloadable product'
+},
+{
+  list:'group product'
+},
+{
+  list:'in-stock product'
+},
+{
+  list:'variable product'
+},
+  ],
 
-
+  ShopPage:[
+    {
+      list:'checkout'
+    },
+    {
+      list:'cart'
+    },
+    {
+      list:'downloads'
+    },
+    {
+      list:'my account'
+    },
+  ],
 
   // main
   Cards:[

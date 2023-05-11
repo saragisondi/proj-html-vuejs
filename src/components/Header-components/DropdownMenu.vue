@@ -2,7 +2,7 @@
 
 
 export default {
-  name:'Dropdown',
+  name:'DropdownMenuEvents',
   props:{
     list:String
   }
@@ -20,6 +20,7 @@ export default {
         </a>
       </li>
     </ul>
+
   
 </template>
 
@@ -33,8 +34,10 @@ export default {
     @include d-flex("column");
     li{
       padding: 20px 0;
+      padding-right:78px;
       border-bottom: 1px solid $quaternary-color;
       width: 100%;
+      
     }
   }
 </style>

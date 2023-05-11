@@ -31,6 +31,10 @@ p{
   color:$quaternary-color;
 }
 
+i{
+  cursor: pointer;
+}
+
 button{
   border-style: none;
   border: 1px solid $secondary-color;

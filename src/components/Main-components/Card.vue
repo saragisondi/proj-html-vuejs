@@ -40,15 +40,15 @@ export default {
     width: 100%;
     height:65%;
     @include d-flex("both");
-
+    
     img{
+      width: 35%;
+      object-fit: cover;
       filter: invert(100%);
     }
 
-     
- 
-    .speaker{
-      width: 20%;
+    img:hover{
+      filter: brightness(0) saturate(100%) invert(51%) sepia(73%) saturate(799%) hue-rotate(357deg) brightness(98%) contrast(94%);
     }
   }
 
@@ -64,10 +64,6 @@ export default {
     }
   }
 
-
-  img:hover{
-    filter: brightness(0) saturate(100%) invert(51%) sepia(73%) saturate(799%) hue-rotate(357deg) brightness(98%) contrast(94%);
-  }
 }
 
 

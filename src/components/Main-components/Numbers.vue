@@ -20,7 +20,7 @@ export default {
 </template>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use '../scss/Mixin.scss' as *;
 
 
