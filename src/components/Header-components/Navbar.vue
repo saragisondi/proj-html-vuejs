@@ -38,10 +38,13 @@ export default {
     </ul>
   </nav>
   
-  <DropdownMenu
-    
-  
-  />
+  <div class="dropdown">
+    <DropdownMenu
+      v-for="dropdownList in store.EventsLink"
+        :key="dropdownList"
+        :list="dropdownList.list"
+    />
+  </div>
 
 </template>
 
@@ -71,6 +74,14 @@ export default {
       }
     }
     
+    .dropdown{
+    border: 1px solid pink;
+    position: absolute;
+    top:55px;
+    left:815px;
+    background-color: $primary-color;
+    
+  }
     //ACTIVE
     .active{
       color:$secondary-color;

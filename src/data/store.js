@@ -53,6 +53,16 @@ jumbotron:'/public/image (1).png',
       list:'concerti per famiglie'
     },
   ],
+
+ShopLink:[
+  {
+    list:''
+  }
+]
+
+
+
+
   // main
   Cards:[
     {
