@@ -24,7 +24,7 @@ export default {
     
 </template> 
 
-<style lang="scss" >
+<style lang="scss" scoped>
 
 @use '../scss/Typography.scss' as *;
 @use '../scss/Mixin.scss' as *;

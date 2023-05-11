@@ -73,8 +73,8 @@ header{
   button{
     margin-right: 30px ;
     border-style:none;
-    width: 80px;
     filter: invert(100%);
+    background-color:$tertiary-color;
   }
 
 

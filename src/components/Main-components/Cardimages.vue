@@ -25,7 +25,7 @@ export default {
 <style lang="scss" scoped>
 @use '../scss/Mixin.scss' as *;
 .cardImages{
-  width: calc(90% / 3);
+  width: calc(85% / 3);
   height: 500px;
   margin:20px;
 
@@ -42,6 +42,9 @@ export default {
   }
   .container-text{
     margin:15px 0;
+    h3{
+      font-size: 18px;
+    }
     p{
       margin:10px 0;
       font-size: small;

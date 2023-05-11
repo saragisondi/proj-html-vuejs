@@ -77,7 +77,7 @@ export default {
     <!-- NEW MUSIC VIDEO  -->
     <section>
       <div class="container-section-img">
-        <h3 class="play">play</h3>
+        <button class="play">play</button>
         <h1>NEW MUSIC VIDEO</h1>
         <img src="/public/imgs/assets/Video.jpg" alt="video">
       </div>
@@ -191,16 +191,6 @@ main{
     margin:50px 0;
   }
 
-  button{
-    border-style: none;
-    border: 1px solid $secondary-color;
-    background-color: transparent;
-    color:$tertiary-color;
-    font-weight: bold;
-    padding: 13px 35px;
-    cursor: pointer;
-  }
-
   section{
     .container-section{
       @include d-flex("both");
@@ -283,6 +273,12 @@ main{
       .play{
         position:absolute;
         top:180px;
+        border:3px solid $secondary-color;
+        width: 50px;
+        height: 70px;
+        border-radius:50px;
+        color:$secondary-color;
+        @include d-flex("both")
       }
     }
 

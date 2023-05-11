@@ -37,7 +37,7 @@ export default {
 
   .container-img{
     width: 100%;
-    height:60%;
+    height:250px;
     @include d-flex("both");
   }
     img{
@@ -49,12 +49,14 @@ export default {
   .container-text{
     margin:15px 0;
     div{
-      margin:10px 0;
+      margin:15px 0;
       font-size: 15px;
       color:$secondary-color;
     }
     p{
       font-size: 15px;
+      text-transform: capitalize;
+      line-height: 1.5rem;
     }
   }
 }

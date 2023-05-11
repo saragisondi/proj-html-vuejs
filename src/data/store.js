@@ -10,11 +10,9 @@ jumbotron:'/public/image (1).png',
   HeaderLinks:[
     {
       name:'home',
-      img:""
     },
     {
       name:'blog',
-      img:""
     },
     {
       name:'events',
@@ -22,19 +20,16 @@ jumbotron:'/public/image (1).png',
     },
     {
       name:'gallery',
-      img:""
     },
     {
       name:'about us',
-      img:""
     },
     {
       name:'contact us',
-      img:""
     },
     {
       name:'shop',
-      img:'/public/imgs/assets/image(7).svg'
+      img:'/public/image(7).svg'
     }, 
   ],
 
@@ -163,6 +158,8 @@ jumbotron:'/public/image (1).png',
         '502 New Design Str, Melbourne, San Francisco, CA 94110, United States Of America Australia',
         'T:1123-456-789',
         'Email:demo@example.com',
+      ],
+      icons:[
       ]
     },
     {
@@ -183,16 +180,6 @@ jumbotron:'/public/image (1).png',
         'License Policy',
         'My Account',
         'Locality'
-      ]
-    },
-    {
-      title:'',
-      text:[
-        '',
-        '',
-        '',
-        '',
-        ''
       ]
     },
   ]

@@ -39,21 +39,21 @@ export default {
 
   nav{
     @include d-flex("both");
-    width: 45%;
     height:100%;
     
     ul{
       @include d-flex("both");
 
+      li{
+        a{
+          margin:0 15px;
+        }
+      }
     }
     
     .active{
       color:$secondary-color;
     }
   }
-  a{
-    img{
-      filter: invert(100%);
-    }
-  }
+
 </style>

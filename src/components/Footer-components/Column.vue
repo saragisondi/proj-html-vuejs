@@ -11,8 +11,7 @@ export default {
     }
   },
   props:{
-    title:String,
-    text:String
+    elements:Array
   }
 }
 </script>
@@ -20,25 +19,42 @@ export default {
 
 <template>
 
-  <div class="col debug">
+  <div class="col-footer"
+  v-for="element in elements"
+      :key="element">
     <ul>
       <li>
         <!-- title -->
-        <h2 
-        v-for="link in store.FooterLinks" :key="link">
-          {{link.title}}
+        <h2>
+          {{element.title.toUpperCase()}}
         </h2>
 
-        <!-- TOFIX -->
         <!-- text -->
         <p 
-        v-for="(element,index) in store.link" :key="index">
-        {{link.element.index}}
+        v-for="(link,index) in element.text" :key="index">
+        {{link}}
       </p>
 
-      </li>
-    </ul>
-  </div>
+      <!-- icons -->
+      <p
+      v-for="icon in element.icons"
+      :key="icon">
+      {{ icon }}
+    </p>
+
+      
+    </li>
+  </ul>
+</div>
+
+<div class="col-footer">
+  <h2>NEWSLETTER</h2>
+  <form>
+    <input type="email" id="email" placeholder="Email">
+    <textarea name="message" id="message" rows="4" placeholder="Message"></textarea>
+  </form>
+  <button>SEND MESSAGE</button>
+</div>
 
 
 </template>
@@ -49,5 +65,33 @@ export default {
 @use '../scss/General.scss' as *;
 @use '../scss/Typography.scss' as *;
 
+.col-footer:last-child{
+  width:350px;
+  margin-left:20px;
+}
+
+.col-footer{
+
+  width: calc(70% / 4);
+  h2{
+    margin-bottom:25px;
+    text-align: left;
+  }
+  
+  p{
+    margin:15px 0;
+  }
+  input, textarea{
+    width: 300px;
+    margin: 10px 0;
+    padding: 10px;
+    border:1px solid #222222;
+    background-color: $primary-color;
+    color:#3F3D3D;
+  }
+  button{
+    margin-top: 20px;
+  }
+}
 
 </style>

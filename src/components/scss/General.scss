@@ -1,4 +1,3 @@
-
 @use './Typography.scss' as *;
 
 *{
@@ -25,6 +24,20 @@ li{
 a{
   text-decoration: none;
   color:$tertiary-color;
+}
+
+p{
+  color:$quaternary-color;
+}
+
+button{
+  border-style: none;
+  border: 1px solid $secondary-color;
+  background-color: transparent;
+  color:$tertiary-color;
+  font-weight: bold;
+  padding: 13px 35px;
+  cursor: pointer;
 }
 
 .container{

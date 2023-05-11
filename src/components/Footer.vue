@@ -14,6 +14,9 @@ export default {
       store
     }
   },
+  mounted(){
+    console.log(store.FooterLinks)
+  }
 }
 </script>
 
@@ -24,10 +27,13 @@ export default {
       <div class="row">
         <!-- TOFIX -->
         <Column
-          :title="store.title"
-          :text="store.element"
+        :elements="store.FooterLinks"
         />
       </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2023 All Rights Reserved. Developed By TemplateMela</p>
     </div>
 
   </footer>
@@ -40,7 +46,14 @@ export default {
 @use './scss/Typography.scss' as *;
 
 .row{
-  border: 1px solid red;
+  @include d-flex("between");
+  padding-bottom:100px;
+}
+
+.copyright{
+  @include d-flex();
+  border-top:1px solid #222222;
+  padding: 30px 0;
 }
 
 </style>
